@@ -6,7 +6,7 @@ This document presents the audit findings for the ReptilianZuckerBidenBartcoin (
 **Contract Address**: `0xa89B728708Be04f57c7a33C6f790B6F077298e26`
 
 ## Audit Summary
-The BART Smart Contract underwent a rigorous audit process, evaluating potential vulnerabilities and code quality. The contract received an overall safety score of 95/100 🛡️.
+The BART Smart Contract underwent a rigorous audit process, evaluating potential vulnerabilities and code quality. The contract received an overall safety score of **95/100** 🛡️.
 
 ## Audit Details
 
