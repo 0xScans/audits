@@ -6,7 +6,7 @@ This document details the audit results for the PotatoPlinko (Plinko) Smart Cont
 **Contract Address**: `0xa89B728708Be04f57c7a33C6f790B6F077298e26`
 
 ## Audit Summary
-The PotatoPlinko Smart Contract has been thoroughly audited, resulting in an overall safety score of 91/100 🛡️.
+The PotatoPlinko Smart Contract has been thoroughly audited, resulting in an overall safety score of **91/100** 🛡️.
 
 ## Audit Details
 
@@ -84,6 +84,16 @@ function verifySignature(address _user, uint256 _amount , uint256 _expiry, Sig m
     bytes32 hash = prepareHash(_user, _amount, _expiry);
     bytes32 messageHash = hash.toEthSignedMessageHash();
     require(!_signStatus[messageHash], "Invalid Signature");
+    _signStatus[messageHash] = true;
+    nonce[_user]++;
+    signatureAddress = messageHash.recover(sig.v, sig.r, sig.s);
+}
+
+function verifySignature(address _user, uint256 _amount , uint256 _expiry, Sig memory sig) private returns (address signatureAddress){
+    bytes32 hash = prepareHash(_user, _amount, _expiry);
+    bytes32 messageHash = hash.toEthSignedMessageHash();
+    require(!_signStatus[messageHash], "Invalid Signature");
+    require(nonce[_user] == _nonce, "Invalid Nonce"); // Check the nonce to prevent replay attacks
     _signStatus[messageHash] = true;
     nonce[_user]++;
     signatureAddress = messageHash.recover(sig.v, sig.r, sig.s);
