@@ -6,7 +6,7 @@ This document provides the audit results for the Uni Terminal (UNIT) Smart Contr
 **Contract Address**: `0x1E241521f4767853B376C2Fe795a222a07D588eE`
 
 ## Audit Summary
-The Uni Terminal Smart Contract has been audited, resulting in an overall safety score of 76.
+The Uni Terminal Smart Contract has been audited, resulting in an overall safety score of **76/100**🛡️.
 
 ## Audit Details
 
