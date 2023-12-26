@@ -89,6 +89,8 @@ function verifySignature(address _user, uint256 _amount , uint256 _expiry, Sig m
     signatureAddress = messageHash.recover(sig.v, sig.r, sig.s);
 }
 
+### Correction Needed
+
 function verifySignature(address _user, uint256 _amount , uint256 _expiry, Sig memory sig) private returns (address signatureAddress){
     bytes32 hash = prepareHash(_user, _amount, _expiry);
     bytes32 messageHash = hash.toEthSignedMessageHash();
