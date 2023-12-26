@@ -97,6 +97,3 @@ The BART Smart Contract underwent a rigorous audit process, evaluating potential
 - **Unused Code**: 
   - Consider removing or implementing the increaseAllowance and decreaseAllowance functions if they are not needed.
 
-## Final Thoughts
-[Include any final observations or overall impressions here]
-
