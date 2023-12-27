@@ -6,7 +6,7 @@ This document outlines the findings of the audit for the Degenerate (DGNRT) Smar
 **Contract Address**: `0xF102f0F2157D9164EFc83841Ef91D2240EC912b2`
 
 ## Audit Summary
-The Degenerate Smart Contract audit resulted in a safety score of 92 🛡️.
+The Degenerate Smart Contract audit resulted in a safety score of **92/100** 🛡️.
 
 ## Audit Details
 
