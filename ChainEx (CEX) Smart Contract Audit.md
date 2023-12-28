@@ -6,7 +6,7 @@ This document presents the audit results for the ChainEx (CEX) Smart Contract. T
 **Contract Address**: `0xd01D133166820557db7138963BCD9009C54E4C33`
 
 ## Audit Summary
-The ChainEx Smart Contract audit resulted in a safety score of 87.
+The ChainEx Smart Contract audit resulted in a safety score of **87/100**.
 
 ## Audit Details
 
@@ -133,5 +133,3 @@ The ChainEx Smart Contract audit resulted in a safety score of 87.
     // Remove unused variables or implement the logic where they are used.
     ```
 
-## Final Thoughts
-[Include any final observations or overall impressions here]
