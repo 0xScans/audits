@@ -77,27 +77,6 @@ The LNDRY Smart Contract audit resulted in a safety score of **90/100** 🛡️.
 
 ## Recommendations for Code Corrections
 
-- **Centralization of Control**: 
-  Implement a time lock or multi-signature requirement for critical functions.
-
-    ```solidity
-    // Adding a time lock mechanism
-    contract TimeLockedController {
-        uint256 public constant delay = 2 days;
-        uint256 public lastCallTime;
-
-        modifier timeLocked() {
-            require(block.timestamp - lastCallTime >= delay, "Action is time-locked");
-            _;
-            lastCallTime = block.timestamp;
-        }
-
-        function performCriticalAction() external timeLocked {
-            // critical action code
-        }
-    }
-    ```
-
 - **Front Running**: 
   Introduce a commit-reveal scheme or use decentralized oracles for price feeds.
 
