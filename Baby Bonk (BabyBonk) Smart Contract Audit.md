@@ -6,7 +6,7 @@ This document provides the audit results for the Baby Bonk (BabyBonk) Smart Cont
 **Contract Address**: `0xBb2826Ab03B6321E170F0558804F2B6488C98775`
 
 ## Audit Summary
-The Baby Bonk (BabyBonk) Smart Contract audit has concluded with a safety score of 87.
+The Baby Bonk (BabyBonk) Smart Contract audit has concluded with a safety score of **87/100**.
 
 ## Audit Details
 
