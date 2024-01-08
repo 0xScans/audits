@@ -1,12 +1,12 @@
-# ZUTToken (ZUTT) Smart Contract Audit 🛡️🏆
+# Ordbridge (BRGE) Smart Contract Audit 🛡️🏆
 
 ## Overview
-This document presents the audit results for the ZUTToken (ZUTT) Smart Contract, emphasizing security aspects and adherence to best practices.
+This document presents the audit results for the Ordbridge (BRGE) Smart Contract, emphasizing security aspects and adherence to best practices.
 
 **Contract Address**: `0x6602E9319f2c5eC0Ba31ffcdc4301d7Ef03b709E`
 
 ## Audit Summary
-The ZUTToken (ZUTT) Smart Contract audit concludes with an outstanding safety score of **100/100**.
+The Ordbridge (BRGE) Smart Contract audit concludes with an outstanding safety score of **100/100**.
 
 ## Audit Details
 
@@ -78,4 +78,4 @@ The ZUTToken (ZUTT) Smart Contract audit concludes with an outstanding safety sc
 - Minting and burning functions are restricted to the contract owner.
 
 ## Final Thoughts
-ZUTToken (ZUTT) showcases exemplary security practices, as evidenced by its perfect safety score. The utilization of OpenZeppelin's well-tested libraries contributes significantly to the contract's robustness. While the minting and burning capabilities are centralized, this design choice does not present any security concerns within the context of the contract. ZUTToken stands as a secure and reliable ERC20 token implementation in the blockchain space.
+Ordbridge (BRGE) showcases exemplary security practices, as evidenced by its perfect safety score. The utilization of OpenZeppelin's well-tested libraries contributes significantly to the contract's robustness. While the minting and burning capabilities are centralized, this design choice does not present any security concerns within the context of the contract. Ordbridge stands as a secure and reliable ERC20 token implementation in the blockchain space.
