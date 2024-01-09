@@ -6,7 +6,7 @@ This document provides a comprehensive audit of the CTO (CTO) Smart Contract, fo
 **Contract Address**: `0x58Bad75e6D83cE27C22be02764A288698E53C1BC`
 
 ## Audit Summary
-The CTO (CTO) Smart Contract audit concludes with a safety score of 55, reflecting numerous high-severity vulnerabilities and threats.
+The CTO (CTO) Smart Contract audit concludes with a safety score of **55/100**, reflecting numerous high-severity vulnerabilities and threats.
 
 ## Audit Details
 
