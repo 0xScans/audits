@@ -25,7 +25,6 @@ The Z-Cubed (Z3) Smart Contract audit has concluded with a safety score of **89/
 
 - **Dependence on Predictable Variables**
   - Result: Low
-  - Details: Rebase mechanism based on block timestamps may be manipulated.
 
 - **Ether/Token Theft**
   - Result: Pass
