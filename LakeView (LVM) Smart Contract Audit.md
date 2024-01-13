@@ -88,33 +88,33 @@ The LakeView (LVM) Smart Contract receives a safety score of **84/100**.
 ### Dependence on Predictable Variables
 - **Correction**: Eliminate reliance on block.number.
   ```solidity
-// Original
-function getTax(uint256 _block) internal { ... }
+  // Original
+  function getTax(uint256 _block) internal { ... }
 
-// Revised
-function getTax() internal { ... }
+ // Revised
+ function getTax() internal { ... }
 
 ### Front Running:
 - **Correction**: Implement anti-front-running measures.
   ```solidity
-// Original
-function _transfer(address from, address to, uint256 amount) internal override { ... }
+  // Original
+  function _transfer(address from, address to, uint256 amount) internal override { ... }
 
-// Revised
-function _transfer(address from, address to, uint256 amount) internal override {
+  // Revised
+  function _transfer(address from, address to, uint256 amount) internal override {
     // Add anti-front-running logic
-}
+  }
 
 ### Logical Issues:
 - **Correction**: Modify the launchTax mechanism for fairness.
   ```solidity
-// Original
-function getTax(uint256 _block) internal { ... }
+  // Original
+  function getTax(uint256 _block) internal { ... }
 
-// Revised
-function getTax() internal {
+  // Revised
+  function getTax() internal {
     // Implement a more equitable tax mechanism
-}
+  }
 
 ### Final Thoughts
 The LakeView (LVM) Smart Contract exhibits medium-level vulnerabilities related to centralization, predictable variables, and potential front-running risks. Addressing these through the suggested corrections will enhance the contract's security and fairness. The logical issue surrounding the high tax rate during the initial launch phase warrants reevaluation to align with user expectations and fairness.
