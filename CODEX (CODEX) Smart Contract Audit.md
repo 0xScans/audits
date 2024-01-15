@@ -6,7 +6,7 @@ This document provides the audit results for the CODEX (CODEX) Smart Contract, f
 **Contract Address**: `0xFD26e39807772251c3BB90fb1fCD9CE5b80c5C24`
 
 ## Audit Summary
-The CODEX (CODEX) Smart Contract achieves a safety score of **91/100**.
+The CODEX (CODEX) Smart Contract achieves a safety score of **98/100**. The contract ownership is renounced, meaning no future modifications are possible by the owner.
 
 ## Detailed Audit Findings
 
@@ -15,7 +15,7 @@ The CODEX (CODEX) Smart Contract achieves a safety score of **91/100**.
 
 ### 2. Centralization of Control
 - **Result**: Medium
-- **Details**: The single owner has control over fee settings and trading permissions.
+- **Details**: Initially, the owner had control over fee settings and trading permissions. However, with the contract ownership renounced, these settings are now fixed and immutable.
 
 ### 3. Compiler Issues
 - **Result**: Pass
@@ -47,7 +47,7 @@ The CODEX (CODEX) Smart Contract achieves a safety score of **91/100**.
 
 ### 12. Logical Issues
 - **Result**: Medium
-- **Details**: Potential for high sell fees (up to 98%), potentially discouraging selling.
+- **Details**: The contract allows for high sell fees (up to 98%), potentially discouraging selling. This setting is now immutable.
 
 ### 13. Oracle Issues
 - **Result**: Pass
@@ -74,34 +74,6 @@ The CODEX (CODEX) Smart Contract achieves a safety score of **91/100**.
 - **Result**: Informational
 - **Details**: Redundant variables like `_developmentAddress` and `_marketingAddress`.
 
-## Recommendations for Code Corrections
-
-### Centralization of Control:
-- **Correction**: Implement a multi-signature or DAO mechanism for critical functions.
-
-    ```solidity
-    // Implement multi-signature or DAO for trading control
-    function setTrading(bool _tradingOpen) public onlyOwnerOrDAO {
-        require(!tradingOpen, "Cannot reenable trading");
-        tradingOpen = _tradingOpen;
-    }
-    ```
-
-### Logical Issues:
-- **Correction**: Limit the sell fee to a reasonable maximum.
-
-    ```solidity
-    // Limit the maximum sell fee
-    require(taxFeeOnSell >= 0 && taxFeeOnSell <= 25, "Sell tax must be between 0% and 25%");
-    ```
-
-### Unused Code:
-- **Correction**: Remove or consolidate redundant variables.
-
-    ```solidity
-    // Consolidate team addresses
-    address payable private _teamAddress = payable(0x...);
-    ```
-
 ## Final Remarks
-The CODEX (CODEX) Smart Contract demonstrates strong potential in its security design but faces challenges with centralization and logical issues related to high sell fees. Implementing the suggested corrections will enhance the contract's security and operational fairness.
+The CODEX (CODEX) Smart Contract demonstrates strong potential in its security design. The renouncement of contract ownership solidifies its operational parameters, making it immune to centralized control but also rigid against future improvements or fixes. Users should be aware of the high sell fees and the immutable nature of the contract settings.
+```
