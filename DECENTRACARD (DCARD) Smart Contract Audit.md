@@ -77,6 +77,10 @@ The DECENTRACARD (DCARD) Smart Contract achieves a safety score of **90/100**.
 ### Centralization of Control:
 Implement multi-signature scheme or DAO for critical functions.
 
+
+### Final Remarks
+The DECENTRACARD (DCARD) Smart Contract demonstrates strong potential in security, with minor concerns regarding centralization and front-running. Addressing these concerns through the recommended corrections will enhance the contract's overall security and reliability.
+
 ```solidity
 // Implement a multi-signature mechanism or DAO governance
 function setFee(...) external onlyMultiSigOrDAO { ... }
@@ -88,6 +92,3 @@ bool private _maxWallet = false;
 // Implement commit-reveal scheme or use oracle for price feeds
 function _transfer(...) private { ... }
 
-
-## Final Remarks
-The DECENTRACARD (DCARD) Smart Contract demonstrates strong potential in security, with minor concerns regarding centralization and front-running. Addressing these concerns through the recommended corrections will enhance the contract's overall security and reliability.
