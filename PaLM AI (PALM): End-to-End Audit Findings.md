@@ -60,7 +60,7 @@ function setMaxWalletSize(uint256 maxWalletSize) public onlyOwner {
 function excludeMultipleAccountsFromFees(address[] calldata accounts, bool excluded) public onlyOwner {
     // ...
 }
-    ```
+```
 
 ***Correction***:
 No direct correction can be provided as these are design choices. However, to reduce centralization, consider
