@@ -1,7 +1,7 @@
 # CryptoCart V2 (CCv2) Smart Contract Audit 🛡️
 
 ## Overview
-This document provides the audit results for the CryptoCart V2 (CCv2) Smart Contract, focusing on security aspects and best practices.
+This document provides the audit results for the CryptoCart V2 (CCv2) Smart Contract, focusing on security aspects and best practices. The contract has been renounced, meaning the owner's control is relinquished.
 
 **Contract Address**: `0x612E1726435fE38dD49A0B35b4065B56f49c8F11`
 
@@ -14,13 +14,9 @@ The CryptoCart V2 (CCv2) Smart Contract achieves a safety score of **89/100**.
 - **Result**: Pass
 
 ### 2. Centralization of Control
-- **Result**: Medium
-- **Details**: Owner and editor roles have significant control over the contract.
-    ```solidity
-    modifier onlyOwner() { ... }
-    modifier onlyEditor() { ... }
-    ```
-    **Correction**: Decentralize control using a multi-signature wallet or DAO.
+- **Result**: Medium (Before Renouncement)
+- **Details**: Initially, the contract had centralization risks with owner and editor roles.
+- **Post-Renouncement**: Control functions are no longer a concern as the contract is renounced.
 
 ### 3. Compiler Issues
 - **Result**: Pass
@@ -39,22 +35,16 @@ The CryptoCart V2 (CCv2) Smart Contract achieves a safety score of **89/100**.
 
 ### 8. Front Running
 - **Result**: Low
-- **Details**: Lack of explicit anti-front-running protections.
-    ```solidity
-    if(takeFee) { ... }
-    ```
-    **Correction**: Implement mechanisms to prevent front-running attempts.
+- **Details**: Lack of explicit anti-front-running protections. 
+- **Post-Renouncement**: Front-running risks remain unchanged.
 
 ### 9. Improper Events
 - **Result**: Pass
 
 ### 10. Improper Authorization Scheme
-- **Result**: Medium
-- **Details**: Owner and editor can exclude accounts from fees.
-    ```solidity
-    function excludeFromFees(address account, bool excluded) public OwnerOrEditor { ... }
-    ```
-    **Correction**: Restrict fee exclusions to owner or improve access control.
+- **Result**: Medium (Before Renouncement)
+- **Details**: Initially, both owner and editor could exclude accounts from fees.
+- **Post-Renouncement**: No longer a concern due to contract renouncement.
 
 ### 11. Integer Over/Underflow
 - **Result**: Pass
@@ -87,4 +77,5 @@ The CryptoCart V2 (CCv2) Smart Contract achieves a safety score of **89/100**.
 - **Result**: Pass
 
 ## Final Remarks
-The CryptoCart V2 (CCv2) Smart Contract displays strong potential in its security design, with areas for improvement in centralization and authorization schemes. It is recommended to address these areas to enhance the contract's security and operational fairness.
+Post-renouncement, the CryptoCart V2 (CCv2) Smart Contract maintains a strong security posture. The concerns around centralization and authorization are no longer applicable. However, the low risk of front-running and other unchanged aspects of the contract's security should still be considered. The renouncement of ownership indicates a commitment to decentralization and immutable functionality.
+
