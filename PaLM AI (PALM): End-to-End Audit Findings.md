@@ -24,28 +24,43 @@ The PaLM AI (PALM) Smart Contract achieves a safety score of **83/100**.
 - **Result**: Medium
 - **Details**: The contract contains functions that centralize control in the hands of the owner, which can be a risk for investors. The owner can set fees, exclude accounts from fees, enable/disable trading, set maximum transaction amounts, and blacklist or unblacklist addresses.
 ***Code***:
-<i>
+```solidity
 function setTrading(bool _tradingOpen) public onlyOwner {
- tradingOpen = _tradingOpen;
+    tradingOpen = _tradingOpen;
 }
-...
+
 function blockBots(address[] memory bots_) public onlyOwner {
-...
+    // ...
+}
+
 function unblockBot(address notbot) public onlyOwner {
-...
-function setFee(uint256 redisFeeOnBuy, uint256 redisFeeOnSell, uint256 taxFeeOnBuy, uint256 taxFeeOnSell) public
-onlyOwner {
-...
+    // ...
+}
+
+function setFee(uint256 redisFeeOnBuy, uint256 redisFeeOnSell, uint256 taxFeeOnBuy, uint256 taxFeeOnSell) public onlyOwner {
+    // ...
+}
+
 function setMinSwapTokensThreshold(uint256 swapTokensAtAmount) public onlyOwner {
-...
+    // ...
+}
+
 function toggleSwap(bool _swapEnabled) public onlyOwner {
-...
+    // ...
+}
+
 function setMaxTxnAmount(uint256 maxTxAmount) public onlyOwner {
-...
+    // ...
+}
+
 function setMaxWalletSize(uint256 maxWalletSize) public onlyOwner {
-...
+    // ...
+}
+
 function excludeMultipleAccountsFromFees(address[] calldata accounts, bool excluded) public onlyOwner {
-</i>
+    // ...
+}
+
 
 ***Correction***:
 No direct correction can be provided as these are design choices. However, to reduce centralization, consider
@@ -66,16 +81,17 @@ implementing a decentralized governance system where token holders can vote on c
 to drain the contract of ETH if the owner's account is compromised.
 
 ***Code***:
-<i>
+```solidity
 function manualswap() external {
- require(_msgSender() == _developmentAddress || _msgSender() == _marketingAddress);
- ...
+    require(_msgSender() == _developmentAddress || _msgSender() == _marketingAddress);
+    // ...
 }
+
 function manualsend() external {
- require(_msgSender() == _developmentAddress || _msgSender() == _marketingAddress);
- ...
+    require(_msgSender() == _developmentAddress || _msgSender() == _marketingAddress);
+    // ...
 }
-</i>
+
 
 ***Correction***:
 Consider implementing a time lock or multi-signature requirement for these sensitive functions to reduce the risk of theft.
@@ -101,13 +117,13 @@ interact with DEXes.
 to a single point of failure if the owner's account is compromised.
 
 ***Code***:
-<i>
+```solidity
 modifier onlyOwner() {
- require(_owner == _msgSender(), "Ownable: caller is not the owner");
- _;
+    require(_owner == _msgSender(), "Ownable: caller is not the owner");
+    _;
 }
-...
-</i>
+// ... additional code ...
+
 
 ***Correction***:
 Consider implementing role-based access control (RBAC) or a multi-signature scheme to mitigate the risks associated
@@ -146,13 +162,13 @@ with a single account having complete control over these functions.
 during contract deployment.
 
 ***Code***:
-<i>
+```solidity
 uint256 private _redisFeeOnBuy = 0;
 uint256 private _redisFeeOnSell = 0;
-...
+// ... additional code ...
 uint256 private _previousredisFee = _redisFee;
 uint256 private _previoustaxFee = _taxFee;
-</i>
+
 
 ***Correction***:
 Remove unused variables or implement functionality that uses these variables to optimize the contract and reduce gas
