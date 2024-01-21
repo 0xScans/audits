@@ -1,6 +1,6 @@
 # Table of Contents
-- [Smart Contract Audit 🛡️](#smart-contract-audit-)
-- [Social Audit Report 📊](#social-audit-report-)
+- [PaLM AI (PALM) Smart Contract Audit 🛡️](#palm-ai-palm-smart-contract-audit-)
+- [PaLM AI Social Audit Report 📊](#palm-ai-social-audit-report-)
 - [$PALM AI Technical Analysis Report 📈](#palm-ai-technical-analysis-report-)
 
 ---
