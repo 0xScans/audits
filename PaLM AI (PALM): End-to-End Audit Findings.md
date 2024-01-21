@@ -23,6 +23,7 @@ The PaLM AI (PALM) Smart Contract achieves a safety score of **83/100**.
 ### 2. Centralization of Control
 - **Result**: Medium
 - **Details**: The contract contains functions that centralize control in the hands of the owner, which can be a risk for investors. The owner can set fees, exclude accounts from fees, enable/disable trading, set maximum transaction amounts, and blacklist or unblacklist addresses.
+
 ***Code***:
 ```solidity
 function setTrading(bool _tradingOpen) public onlyOwner {
@@ -91,7 +92,7 @@ function manualsend() external {
     require(_msgSender() == _developmentAddress || _msgSender() == _marketingAddress);
     // ...
 }
-
+```
 
 ***Correction***:
 Consider implementing a time lock or multi-signature requirement for these sensitive functions to reduce the risk of theft.
@@ -123,7 +124,7 @@ modifier onlyOwner() {
     _;
 }
 // ... additional code ...
-
+```
 
 ***Correction***:
 Consider implementing role-based access control (RBAC) or a multi-signature scheme to mitigate the risks associated
@@ -168,7 +169,7 @@ uint256 private _redisFeeOnSell = 0;
 // ... additional code ...
 uint256 private _previousredisFee = _redisFee;
 uint256 private _previoustaxFee = _taxFee;
-
+```
 
 ***Correction***:
 Remove unused variables or implement functionality that uses these variables to optimize the contract and reduce gas
