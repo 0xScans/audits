@@ -32,12 +32,14 @@ The Gift (GIFT) Smart Contract has achieved a safety score of **84/100**.
 Details: The `swapBack` function sends the entire contract's balance to the owner after taking a fee for the
 `TAX_ADDRESS`. This could potentially allow the owner to drain the contract of ETH, which may not be in the best
 interest of the token holders.
+
 Code:
 <i>
 ```solidity
 (success, ) = address(owner()).call{value: address(this).balance}("");
 ```
 </i>
+
 Correction:
 <i>
 ```solidity
@@ -71,12 +73,14 @@ Details: The contract uses SafeMath for all arithmetic operations, which protect
 Details: The `TAX_FEE` is set to 100%, which means the entire amount of ETH received from the `swapBack` function is
 sent to the `TAX_ADDRESS`. This is likely a logical error, as it would not leave any ETH for other purposes such as
 liquidity provision or project development.
+
 Code:
 <i>
 ```solidity
 uint256 public constant TAX_FEE = 100; // 100% tax fee
 ```
 </i>
+
 Correction:
 <i>
 ```solidity
@@ -110,6 +114,7 @@ uint256 public constant TAX_FEE = 10; // 10% tax fee, or another reasonable perc
 
 Details: There are commented-out imports for `ERC20Burnable` and `ERC20Pausable` which are not used in the contract.
 It's good practice to remove unused code to reduce contract size and potential confusion.
+
 Code:
 <i>
 ```solidity
@@ -117,6 +122,7 @@ Code:
 // import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
 ```
 </i>
+
 Correction:
 <i>
 ```solidity
