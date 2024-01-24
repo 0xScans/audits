@@ -6,8 +6,8 @@ In a comprehensive assessment, MNZChain's smart contracts exhibit robust securit
 
 - [MNZChain (Bridge-Smart-Contracts) 🛡️](#mnzchain-bridge-smart-contracts)
 - [MNZChain (System-Contracts) 🛡️](#mnzchain-system-contracts)
-- [Social Audit Report (1/23/2024 - 1/24/2024) 📊](#social-audit-report-1232024---1242024-)
-- [NETZ Technical Analysis Report 📈](#netz-technical-analysis-report-)
+- [MNZChain Social Audit Report (1/23/2024 - 1/24/2024) 📊](#mnzchain-social-audit-report-1232024---1242024-)
+- [MainnetZ (NETZ) Technical Analysis Report 📈](#mainnetz-netz-technical-analysis-report-)
   
   
 # MNZChain (Bridge-Smart-Contracts)
