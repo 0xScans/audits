@@ -12,11 +12,6 @@ In a comprehensive assessment, MNZChain's smart contracts exhibit robust securit
   
 # MNZChain (Bridge-Smart-Contracts)
 
-## Table of Contents
-
-- [Bridge.sol Smart Contract Audit 🛡️](#bridgesol-smart-contract-audit-)
-- [PeggedToken.sol Smart Contract Audit 🛡️](#peggedtokensol-smart-contract-audit-)
-
 ## Bridge.sol Smart Contract Audit 🛡️
 
 ## Overview
@@ -194,15 +189,6 @@ Implementing decentralized governance and specific front-running protections are
 **Note**: This audit is based on the provided smart contract code at the time of analysis. Future changes or updates to the contract may alter its security and functionality.
 
 # MNZChain (System-Contracts)
-
-# Table of Contents
-
-- [MNZChain Params.sol Smart Contract Audit 🛡️](#mnzchain-params-sol-smart-contract-audit-)
-- [MNZChain Proposal.sol Smart Contract Audit 🛡️](#mnzchain-proposal-sol-smart-contract-audit-)
-- [MNZChain Punish.sol Smart Contract Audit 🛡️](#mnzchain-punish-sol-smart-contract-audit-)
-- [MNZChain ValidatorHelper.sol Smart Contract Audit 🛡️](#mnzchain-validatorhelper-sol-smart-contract-audit-)
-- [MNZChain Validators.sol Smart Contract Audit 🛡️](#mnzchain-validators-sol-smart-contract-audit-)
-
 
 ## MNZChain Params.sol Smart Contract Audit 🛡️
 
