@@ -14,8 +14,8 @@ In a comprehensive assessment, MNZChain's smart contracts exhibit robust securit
 
 # Table of Contents
 
-- [Bridge.sol Smart Contract Audit 🛡️](#bridge-sol-smart-contract-audit-)
-- [PeggedToken.sol Smart Contract Audit 🛡️](#peggedtoken-sol-smart-contract-audit-)
+- [Bridge.sol Smart Contract Audit 🛡️](#bridgesol-smart-contract-audit-)
+- [PeggedToken.sol Smart Contract Audit 🛡️](#peggedtokensol-smart-contract-audit-)
 
 
 ## Bridge.sol Smart Contract Audit 🛡️
